@@ -31,11 +31,9 @@ if (isset($_GET['altura']) && isset($_GET['peso'])) {
         'classificacao' => $categoria
     ];
     // Convertendo o array em formato JSON
-    $json = json_encode($resultado);
-
+    $json = json_encode($resultado,JSON_PRETTY_PRINT);
     // Definindo o cabeçalho da resposta como JSON
     header('Content-Type: application/json');
-
     // Enviando o JSON como resposta
     echo $json;
 } else {
